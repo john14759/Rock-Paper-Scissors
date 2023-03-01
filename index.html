@@ -6,16 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel='stylesheet' href="style.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Solway:wght@500&display=swap')</style>
 </head>
+
 <body>
-    <h1 class="header">Rock, Paper and Scissors</h1>
-    <div class="choice">Pick an option:</div>
+    <header class='header'>
+        <h1 class="title">Rock, Paper, Scissors</h1>
+    </header>
+    <div class="choice">Pick an option, best of 5 wins!</div>
     <div class="buttoncontainer">
     <button type='submit' value="rock"><img src="./img/rock1.png"></button>
     <button type='submit' value="paper"><img src="./img/paper1.png"></button>
     <button type='submit' value="scissors"> <img src="./img/scissors1.png"></button>
     </div>
-    <div class='results'></div>
+    <div id='results'></div>
+    <div id = 'score'>
+    <div id='computerscore'></div>
+    <div id='playerscore'></div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
