@@ -80,3 +80,18 @@ button:hover{
     border: 5px solid black;
 }
 
+.footer{
+    border-top: 1px solid black;
+    font-family: "Solway", serif;
+    font-size: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:white;
+}
+
