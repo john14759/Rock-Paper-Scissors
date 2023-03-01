@@ -24,6 +24,8 @@ function getComputerChoice(){
 
 function oneRound(playerSelection){
     let log="";
+    let scorecomputer = "";
+    let scoreplayer = "";
     let computerGuess = getComputerChoice();
 
         if((playerSelection == 'paper' && computerGuess == 'rock')||
@@ -32,8 +34,9 @@ function oneRound(playerSelection){
 
             playerScore +=1;
 
-        log = ('Computer selected: ' + computerGuess + '<br>Player selected: ' + playerSelection + '<br>You win, ' + playerSelection + ' beats ' + computerGuess + ".<br>" +
-                    'Player Score: ' + playerScore + '<br>Computer Score: ' + computerScore);
+        log = ('Computer selected: ' + computerGuess + '<br>Player selected: ' + playerSelection + '<br><br>You win, ' + playerSelection + ' beats ' + computerGuess);
+        scoreplayer = ('Player Score: ' + playerScore);
+        scorecomputer = ('Computer Score: ' + computerScore);
 
             if (playerScore ==5){
                     log = ('You won the game! Congrats!');
@@ -43,15 +46,17 @@ function oneRound(playerSelection){
         }
 
         else if (playerSelection == computerGuess){
-            log = ('Computer selected: ' + computerGuess + '<br>Player selected: ' + playerSelection +'<br>It is a tie. You both chose ' + playerSelection + ".<br>" +
-            'Player Score: ' + playerScore + '<br>Computer Score: ' + computerScore);
+            log = ('Computer selected: ' + computerGuess + '<br>Player selected: ' + playerSelection +'<br><br>It is a tie. You both chose ' + playerSelection);
+            scoreplayer = ('Player Score: ' + playerScore);
+            scorecomputer = ('Computer Score: ' + computerScore);
         }
 
         else {
             computerScore +=1;
 
-            log = ('Computer selected: ' + computerGuess + '<br>Player selected: ' + playerSelection + '<br>You lose, ' + computerGuess + ' beats ' + playerSelection + ".<br>" +
-                    'Player Score: ' + playerScore + '<br>Computer Score: ' + computerScore);
+            log = ('Computer selected: ' + computerGuess + '<br>Player selected: ' + playerSelection + '<br><br>You lose, ' + computerGuess + ' beats ' + playerSelection);
+            scoreplayer = ('Player Score: ' + playerScore);
+            scorecomputer = ('Computer Score: ' + computerScore);
 
             if (computerScore ==5){
                     log = ('You lost the game! Try again!');
@@ -62,6 +67,8 @@ function oneRound(playerSelection){
         }
 
         document.getElementById('results').innerHTML = log;
+        document.getElementById('computerscore').innerHTML = scorecomputer;
+        document.getElementById('playerscore').innerHTML = scoreplayer;
         return;
     }
 
