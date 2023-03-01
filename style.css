@@ -3,19 +3,23 @@ body{
 }
 
 .header{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 50px;
     display: flex;
     justify-content: center;
-    background-color: blanchedalmond;
-    border: 5px solid black;
+    padding: 40px 0px;
     margin-bottom: 40px;
 }
 
+.title {
+    font-size: 50px;
+    font-family: "Solway", serif;
+    color: black;
+}
+
 .buttoncontainer{
+    width: auto;
     display: flex;
-    gap:50px;
-    justify-content: space-around;
+    gap:20px;
+    justify-content:center;
     margin-top: 30px;
 }
 
@@ -26,7 +30,8 @@ img{
 
 
 .choice{
-    font-size: 50px;
+    font-family: "Solway", serif;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -47,7 +52,12 @@ button:hover{
     border:5px solid black;
 }
 
-.results{
-    color: black;
+#results{
+    font-family: "Solway", serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    text-align:center;
 }
 
