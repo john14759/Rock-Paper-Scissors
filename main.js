@@ -20,7 +20,6 @@ function getComputerChoice(){
             break;
     }
 
-    return computerGuess;
 }
 
 function oneRound(playerSelection){
@@ -33,36 +32,36 @@ function oneRound(playerSelection){
 
             playerScore +=1;
 
-        log = ('You win, ' + playerSelection + ' beats ' + computerGuess + 
-                    '. Player Score: ' + playerScore + ' Computer Score: ' + computerScore);
+        log = ('Computer selected: ' + computerGuess + '<br>Player selected: ' + playerSelection + '<br>You win, ' + playerSelection + ' beats ' + computerGuess + ".<br>" +
+                    'Player Score: ' + playerScore + '<br>Computer Score: ' + computerScore);
 
             if (playerScore ==5){
-                    log = ('You win!');
+                    log = ('You won the game! Congrats!');
                     playerScore=0;
                     computerScore=0;
             }     
         }
 
         else if (playerSelection == computerGuess){
-            log = ('It is a tie. You both chose ' + playerSelection +
-            '. Player Score: ' + playerScore + ' Computer Score: ' + computerScore);
+            log = ('Computer selected: ' + computerGuess + '<br>Player selected: ' + playerSelection +'<br>It is a tie. You both chose ' + playerSelection + ".<br>" +
+            'Player Score: ' + playerScore + '<br>Computer Score: ' + computerScore);
         }
 
         else {
             computerScore +=1;
 
-            log = ('You lose, ' + computerGuess + ' beats ' + playerSelection + 
-                    '. Player Score: ' + playerScore + ' Computer Score: ' + computerScore);
+            log = ('Computer selected: ' + computerGuess + '<br>Player selected: ' + playerSelection + '<br>You lose, ' + computerGuess + ' beats ' + playerSelection + ".<br>" +
+                    'Player Score: ' + playerScore + '<br>Computer Score: ' + computerScore);
 
             if (computerScore ==5){
-                    log = ('You lose!');
+                    log = ('You lost the game! Try again!');
                     playerScore=0;
                     computerScore=0;
             }     
 
         }
 
-        document.getElementsByClassName('results').innerHTML = log;
+        document.getElementById('results').innerHTML = log;
         return;
     }
 
